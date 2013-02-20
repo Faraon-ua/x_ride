@@ -1,0 +1,17 @@
+development:
+  adapter: postgresql
+  host: localhost
+  encoding: unicode
+  database: bike_ride_development
+  pool: 5
+  username: postgres
+  password: poas054
+
+test:
+  adapter: postgresql
+  host: localhost
+  encoding: unicode
+  database: bike_ride_test
+  pool: 5
+  username: postgres
+  password: poas054

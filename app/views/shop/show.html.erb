@@ -1,0 +1,7 @@
+<ul class="part_types_box">
+  <% @part_types.each do |part_type| %>
+      <a class="block_anchor" href="<%= url_for user_part_type_path(user_id: @user.id, id: part_type.id) %>">
+        <%= render part_type %>
+      </a>
+  <% end %>
+</ul>

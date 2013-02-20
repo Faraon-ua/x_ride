@@ -1,0 +1,94 @@
+!!! 5
+%html{ :lang => "en" }
+  %head
+    %title Applicapp
+
+    %meta{ :charset => "utf-8" }
+    %meta{ 'http-equiv' => "X-UA-Compatible", :content => "IE=edge,chrome=1" }
+    %meta{ 'http-equiv' => "description", :content => '' }
+    %meta{ 'http-equiv' => "author", :content => "" }
+    %meta{ 'http-equiv' => "viewport", :content => "1000" }
+
+    = stylesheet_link_tag 'layout', :media => "all"
+    = javascript_include_tag "application"
+    = csrf_meta_tags
+
+  %body
+    = render :partial => 'share/layouts_top_navigation'
+
+    #content.container.subcontainer
+      = render :partial => 'share/layouts_flashes'
+      = yield
+
+    //[alexd] it is singleton for all bootstrap modal windows
+    #modal_window.modal.hide.fade{ :role => 'dialog' }
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>BikeRide</title>
+  <!--stylesheets-->
+  <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/>
+  <%= stylesheet_link_tag "application", :media => "all" %>
+  <%= stylesheet_link_tag "redactor", :media => "all" %>
+  <!--scripts-->
+  <!-- Put this script tag to the <head> of your page -->
+  <script type="text/javascript" src="//vk.com/js/api/openapi.js?63"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+  <script src="http://blueimp.github.com/JavaScript-Load-Image/load-image.min.js"></script>
+  <%= javascript_include_tag "application" %>
+  <%= javascript_include_tag "redactor" %>
+
+  <%= csrf_meta_tags %>
+
+</head>
+<body>
+
+<!--<div>-->
+  <!--<div>-->
+    <!--<p id="back-top">-->
+      <!--<a href="#top"><span></span> <%= t "labels.to_top" %></a>-->
+    <!--</p>-->
+  <!--</div>-->
+  <!--<div id="main">-->
+    <!--<table class="main">-->
+      <!--<tr>-->
+        <!--<td>-->
+          <!--&lt;!&ndash; header &ndash;&gt;-->
+          <!--<header>-->
+            <!--<nav>-->
+              <!--<ul>-->
+                <!--<li><%= link_to "Home", main_app.root_path %></li>-->
+                <!--<li><%= link_to "Барахолка", main_app.parts_path %></li>-->
+                <!--<li><%= link_to "Events & Rides", main_app.events_path %></li>-->
+                <!--<li><%= link_to "Forum", "/forums" %></li>-->
+                <!--<li><a href="index-4.html">Join the Club</a></li>-->
+                <!--<li><a href="index-5.html">Photos</a></li>-->
+                <!--<li><a href="index-6.html">Contacts</a></li>-->
+              <!--</ul>-->
+            <!--</nav>-->
+          <!--</header>-->
+
+          <!--&lt;!&ndash;<a href="#" class="twitter"><img src="images/twitter.png" alt="asdasd"></a>&ndash;&gt;-->
+
+          <!--<div id="content">-->
+            <!--<div class="hero-unit">-->
+              <!--<% flash.each do |key, value| %>-->
+                <!--<div class="flash <%= key %>"><%= value %></div>-->
+              <!--<% end %>-->
+            <!--</div>-->
+
+            <!--<%= yield %>-->
+          <!--</div>-->
+        <!--</td>-->
+        <!--<td>-->
+          <!--<%= render :partial => 'layouts/login' %>-->
+        <!--</td>-->
+      <!--</tr>-->
+    <!--</table>-->
+
+  <!--</div>-->
+<!--</div>-->
+</body>
+</html>

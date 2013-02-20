@@ -1,0 +1,24 @@
+<%= link_to 'New Part', new_part_path %>
+<% if user_signed_in? %>
+    <%= link_to "My shop", user_shop_path(current_user.username) %>
+<% end %>
+<br/>
+<table>
+  <tr>
+    <td class="filters_box">
+      <%= render :partial => 'filters' %>
+    </td>
+    <td>
+      <ul class="parts_box">
+        <% if @parts.empty? %>
+            There are no parts results for such filters
+        <% else %>
+            <%= render "sort_and_search" %>
+            <% @parts.each do |part| %>
+                <%= render part %>
+            <% end %>
+        <% end %>
+      </ul>
+    </td>
+  </tr>
+</table>

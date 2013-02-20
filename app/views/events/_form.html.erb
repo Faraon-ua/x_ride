@@ -1,0 +1,124 @@
+<%= form_for(@event) do |f| %>
+    <% if @event.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@event.errors.count, "error") %> prohibited this event from being saved:</h2>
+
+          <ul>
+            <% @event.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+
+    <table>
+      <tr>
+        <td>
+          <%= t "labels.name" %>
+        </td>
+        <td>
+          <%= f.text_field :name %>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <%= t "labels.picture" %>
+        </td>
+        <td>
+          <%= f.file_field :event_pic, :accept => "image/*" %>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <%= t "labels.type" %>
+        </td>
+        <td>
+          <%= f.select :event_type, t("event_types").invert %>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <%= t "labels.route" %>
+        </td>
+        <td>
+          <%= f.text_area :route %>
+          <br/>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <%= raw(t"labels.map_url") %>
+        </td>
+        <td>
+          <%= f.text_area :map_url %>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <%= t "labels.start_at" %>
+        </td>
+        <td>
+          <%= f.text_field :start_at, :class => "datetimepicker" %> place <%= f.text_field :start_at_place %>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <%= t "labels.end_at" %>
+        </td>
+        <td>
+          <%= f.text_field :end_at, :class => "datetimepicker" %> place <%= f.text_field :end_at_place %>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <%= t "labels.distance" %>
+        </td>
+        <td>
+          <%= f.number_field :distance %> km
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <%= t "labels.coverage" %>
+        </td>
+        <td>
+          <%= f.text_field :coverage %>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <%= t "labels.rate" %>
+        </td>
+        <td>
+          <%= f.select :rate, t("velocity_rates").invert %>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <%= t "labels.stuff" %>
+        </td>
+        <td>
+          <%= f.text_field :stuff %>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <%= t "labels.contacts" %>
+        </td>
+        <td>
+          <%= f.text_field :contacts %>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <%= t "labels.description" %>
+        </td>
+        <td>
+          <%= f.text_area :description, :class => "redactor" %>
+        </td>
+      </tr>
+    </table>
+    <div class="actions">
+      <%= f.submit %>
+    </div>
+<% end %>

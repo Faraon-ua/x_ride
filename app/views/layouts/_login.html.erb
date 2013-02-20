@@ -1,0 +1,19 @@
+<ul class="nav pull-right twitter">
+  <% if user_signed_in? %>
+      <li class="pull-right">
+
+        <%= link_to('Logout', main_app.destroy_user_session_path) %>
+      </li>
+  <% else %>
+      <li class="pull-right">
+        <div id="vk_auth"></div>
+        <div class="mainDiv">
+          <div class="authBlock" style="padding-top: 5px;">
+            <a id="auth_button" class="button_yes" href="<%= main_app.new_user_session_path %>">
+              <div id="auth_user" class="button">Regular login/register</div>
+            </a>
+          </div>
+        </div>
+      </li>
+  <% end %>
+</ul>

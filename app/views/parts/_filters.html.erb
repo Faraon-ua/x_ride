@@ -1,0 +1,76 @@
+<script src="http://malsup.github.com/jquery.form.js"></script>
+
+<span class="filters"><%= t 'parts.part.filters' %></span>
+
+<%= form_tag('/parts', :method => :get, :id => "filters_form") do %>
+    <div id="accordion">
+      <h3><a href="#"><%= t 'parts.form.part_type' %></a></h3>
+
+      <div>
+        <% PartType.all.sort_by { |entry| entry[:title] }.each do |part_type| %>
+            <%= filter_checkbox "part_types", part_type.id %>
+            <span class='selectable'><%= part_type.title %></span>
+            <br/>
+        <% end %>
+      </div>
+
+      <h3><a href="#"><%= t 'parts.form.brand' %></a></h3>
+
+      <div>
+        <% @parts.pluck(:brand_name).each do |brand| %>
+            <%= filter_checkbox "brands", brand %>
+            <span class='selectable'><%= brand %></span>
+            <br/>
+        <% end %>
+      </div>
+
+      <h3><a href="#">  <%= t 'parts.form.region' %></a></h3>
+
+      <div>
+        <% t("regions").each do |region| %>
+            <%= filter_checkbox "regions", region[0] %>
+            <span class='selectable'><%= region[1] %></span>
+            <br/>
+        <% end %>
+      </div>
+      <h3><a href="#"><%= t 'parts.form.condition' %></a></h3>
+
+      <div>
+        <% Part.conditions.each do |condition| %>
+            <%= filter_checkbox "conditions", condition %>
+            <span class='selectable'><%= t "parts.form.#{condition}" %></span>
+            <br/>
+        <% end %>
+      </div>
+      <h3><a href="#"><%= t 'parts.form.availability' %></a></h3>
+
+      <div>
+        <% Part.availability.each do |avail| %>
+            <%= filter_checkbox "availability", avail %>
+            <span class='selectable'><%= t "parts.form.#{avail}" %></span>
+            <br/>
+        <% end %>
+      </div>
+
+      <h3><a href="#"><%= t 'parts.form.price' %></a></h3>
+
+      <div>
+        0 uah for gift
+        <div>
+          <div class="pull-left">
+            <span>From: </span><br/>
+            <%= number_field "filters", "min_price", :value => (params[:min_price] if params[:min_price].present?) %>
+          </div>
+          <span>To: </span><br/>
+          <%= number_field "filters", "max_price", :value => (params[:max_price] if params[:max_price].present?) %>
+          (<%= t "parts.form.currency" %>)
+        </div>
+      </div>
+
+    </div>
+    <div>
+      <a href="#" id="reset_checkboxes" class="pull-left"><%= t "labels.reset_filters" %></a>
+      <%= button_tag t("parts.part.filter"), :type => 'button', :id => "submit_filters", :class => "pull-right" %>
+    </div>
+
+<% end %>

@@ -1,0 +1,7 @@
+<% if @parts %>
+    <ul class="parts_box">
+      <% @parts.each do |part| %>
+          <%= render part %>
+      <% end %>
+    </ul>
+<% end %>

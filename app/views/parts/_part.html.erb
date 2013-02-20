@@ -1,0 +1,68 @@
+<li class="separator">
+</li>
+<li>
+  <hr/>
+  <div class="img_box">
+    <a href="<%= url_for part %>">
+      <%= image_tag part.assets.first.asset.url(:medium) %>
+    </a>
+  </div>
+  <div class="title">
+    <%= link_to "#{part.brand_name} #{part.title}", part %>
+    <div class="ellipsis">
+      <%= raw part.description %>
+    </div>
+  </div>
+
+  <div class="pull-right" style="float:right;">
+    <div>
+      <table class='partfields'>
+        <tr>
+          <td>
+            <u><%= t 'parts.form.price' %></u>
+          </td>
+          <td>
+            <div class="partfield"><%= part.price %> грн</div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <u><%= t 'parts.form.availability' %></u>
+          </td>
+          <td>
+            <div class="partfield">
+              <%= raw part.availability %>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <u><%= t 'parts.form.region' %></u>
+          </td>
+          <td>
+            <div class="partfield"><%= part.region %></div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <u><%= t 'parts.form.condition' %></u>
+          </td>
+          <td>
+            <div class="partfield"><%= part.condition %></div>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="actions">
+      <% if is_owner_or_admin(part.id) %>
+          <%= link_to image_tag("edit.png", :border=>0), edit_part_path(part) %>
+          <br/>
+          <br/>
+          <%= link_to image_tag("delete.png", :border=>0, :width => 24), part, method: :delete, data: {confirm: 'Are you sure?'} %>
+      <% end %>
+    </div>
+  </div>
+
+
+</li>

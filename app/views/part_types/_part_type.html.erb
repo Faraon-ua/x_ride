@@ -1,0 +1,15 @@
+<li>
+  <div class='img_box'>
+    <%= image_tag part_type.picture.url(:medium) %>
+  </div>
+  <div class="part_type_title">
+    <%= part_type.title %>
+  </div>
+  <% if is_admin? %>
+      <div>
+        <%= link_to 'Show', part_type %> |
+        <%= link_to 'Edit', edit_part_type_path(part_type) %> |
+        <%= link_to 'Destroy', part_type, method: :delete, data: {confirm: 'Are you sure?'} %>
+      </div>
+  <% end %>
+</li>

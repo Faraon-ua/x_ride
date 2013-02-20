@@ -1,0 +1,9 @@
+<h2><%= t "profile.profile" %></h2>
+<%= t"profile.fields_notice" %>
+<%= form_for @user, :html => {:multipart => true} do |f| %>
+    <%= f.file_field :avatar%>
+    <%= f.text_field :first_name %>
+    <%= f.text_field :last_name %>
+<% end %>
+
+<%= link_to t"profile.change_password", edit_user_registration_path %>

@@ -1,0 +1,12 @@
+﻿with recursive allcats(id) as (
+    select id
+    from vehicles
+    where id = 2
+    union all
+    select C.id
+    from allcats P
+    inner join vehicles C on P.id = C.parent
+)
+select * from allcats
+
+select * from vehicles

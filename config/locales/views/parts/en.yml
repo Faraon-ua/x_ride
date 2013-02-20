@@ -1,0 +1,26 @@
+en:
+  parts:
+    form:
+      part_hint: 'Please fill in all the fields correctly so your part would be much easier to find'
+      edit: 'Edit'
+      part_pictures: 'Part pictures'
+      brand: 'Brand name'
+      brand_hint: 'Like: Shimano, Avid, Scott etc'
+      part_name: 'Part name'
+      price: 'Price'
+      availability: 'Availability'
+      part_type: 'Part type'
+      remove: 'remove?'
+      submit: 'Submit'
+      region: 'Region'
+      available: 'available'
+      on_request: 'on request'
+      sold_out: 'sold out'
+      condition: 'Condition'
+      new: 'new'
+      used: 'used'
+      currency: "uah"
+    part:
+      filters: 'Filters'
+      filter: "Filter"
+

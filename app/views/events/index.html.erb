@@ -1,0 +1,36 @@
+<h1>Listing events</h1>
+
+<% @events.each do |event| %>
+    <hr/>
+    <div>
+      <div class="pull-left" style="margin-right: 5px;">
+        <%= link_to event_path(event) do %>
+            <%= image_tag event.event_pic.url(:medium) %>
+        <% end %>
+      </div>
+      <%= link_to event_path(event) do %>
+          <h3><%= event.start_at.to_date %> [<%= t "event_types.#{event.event_type}" %>] <%= event.name %></h3>
+      <% end %>
+
+      <strong><%= t "labels.route" %></strong>: <span class=".ellipsis"><%= event.route %></span>
+      <br/>
+      <strong><%= t "labels.distance" %></strong>: <%= event.distance %>
+      <br/>
+      <strong><%= t "labels.coverage" %></strong>: <%= event.coverage %>
+      <br/>
+      <strong><%= t "labels.rate" %></strong>: <%= event.rate %>
+
+      <% if is_owner_or_admin(event.id) %>
+          <div class="pull-right">
+            <%= link_to 'Edit', edit_event_path(event) %>
+            <br/>
+            <%= link_to 'Destroy', event, method: :delete, data: {confirm: 'Are you sure?'} %>
+          </div>
+      <% end %>
+    </div>
+
+<% end %>
+
+<br/>
+
+<%= link_to 'New Event', new_event_path %>

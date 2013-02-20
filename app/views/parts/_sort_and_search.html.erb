@@ -1,0 +1,14 @@
+<div class="sort">
+  <div class="pull-left">
+    <%= form_tag('/parts', :method => :get, :id => "filters_form") do %>
+        <%= t "labels.search_in_results" %>
+        <input type="text" value="<%= params[:search] if params[:search] %>" id="search" name="search"/>
+        <%= submit_tag t "labels.search" %>
+    <% end %>
+  </div>
+  <div class="pull-right">
+    <%= t "labels.sort_by" %>:
+    <%= sortable "price" %>
+    <%= sortable "created_at" %>
+  </div>
+</div>

@@ -1,0 +1,72 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+en:
+  regions:
+    Lviv: Lviv
+    Ivano-Frankivsk: Ivano-Frankivsk
+    Kyiv: Kyiv
+    Kharkiv: Kharkiv
+    Uzhhorod: Uzhhorod
+    Odesa: Odesa
+    Lutsk: Lutsk
+    Crim: Crimea
+    Vinnytsia: Vinnytsia
+    Dnipropetrovsk: Dnipropetrovsk
+    Donetsk: Donetsk
+    Zhytomyr: Zhytomyr
+    Zaporizhzhia: Zaporizhzhia
+    Kirovohrad: Kirovohrad
+    Luhansk: Luhansk
+    Mykolaiv: Mykolaiv
+    Poltava: Poltava
+    Rivne: Rivne
+    Sumy: Sumy
+    Ternopil: Ternopil
+    Kherson: Kherson
+    Khmelnytskyi: Khmelnytskyi
+    Cherkasy: Cherkasy
+    Chernivtsi: Chernivtsi
+    Chernihiv: Chernihiv
+  event_types:
+    bike_ride: Bike ride
+    bike_hike: Bike hiking
+    event: Event
+    pedestrian_hike: Pedestrian hiking
+    journey: Journey
+    excursion: Excursion
+  velocity_rates:
+    by_the_last: By the last
+    slow: Slow
+    medium: Medium
+    hight: High
+  labels:
+    reset_filters: "Reset filters"
+    search_in_results: "Search in results"
+    search: "Search"
+    sort_by: "Sort by"
+    to_top: "Back to page top"
+#    events
+    name: "Name"
+    type: "Type"
+    date: "Date"
+    route: "Route"
+    start_at: "Start at"
+    end_at: "End at"
+    distance: "Distance"
+    coverage: "Asphalt/ground/sand(%)"
+    rate: Avarage rate
+    stuff: "Take with yourself"
+    contacts: "Contacts"
+    description: "Description"
+    picture: "Picture"
+    map_url: Google map HTML <br/> to embed in website
+    register: Register
+    registered: Register users
+    register_error: You are already registered for this event
+    register_success: You have been successfully registered for this event
+#   profile
+  profile:
+    fields_notice: Please fill in all profile fields so we could send you confirnations and notifactions properly
+    profile: Profile
+    change_password: Profile

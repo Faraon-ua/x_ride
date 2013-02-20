@@ -1,0 +1,379 @@
+
+
+/* line 23, ../../../../../../../.rvm/gems/ruby-1.9.3-p194@bike_ride/bundler/gems/forem-theme-twist-f08ab243ee69/app/assets/stylesheets/forem/twist/style.css.scss */
+label {
+    display: block;
+}
+
+/* line 27, ../../../../../../../.rvm/gems/ruby-1.9.3-p194@bike_ride/bundler/gems/forem-theme-twist-f08ab243ee69/app/assets/stylesheets/forem/twist/style.css.scss */
+#forums {
+    border: 1px solid #ddd;
+    font: 11px "Helvetica Neue", Helvetica;
+    color: #444444;
+    background: #fff;
+    line-height: 120%;
+}
+
+#forums thead tr th, .topics thead tr th {
+    color: white;
+    font-family: Helvetica;
+    font-weight: bold;
+}
+
+/* line 42, ../../../../../../../.rvm/gems/ruby-1.9.3-p194@bike_ride/bundler/gems/forem-theme-twist-f08ab243ee69/app/assets/stylesheets/forem/twist/style.css.scss */
+#forums tbody td, .topics tbody td {
+    background: white;
+}
+
+/* line 47, ../../../../../../../.rvm/gems/ruby-1.9.3-p194@bike_ride/bundler/gems/forem-theme-twist-f08ab243ee69/app/assets/stylesheets/forem/twist/style.css.scss */
+#forum, #topic {
+    position: relative;
+}
+
+/* line 49, ../../../../../../../.rvm/gems/ruby-1.9.3-p194@bike_ride/bundler/gems/forem-theme-twist-f08ab243ee69/app/assets/stylesheets/forem/twist/style.css.scss */
+#forum .secondary-nav, #topic .secondary-nav {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+/* line 54, ../../../../../../../.rvm/gems/ruby-1.9.3-p194@bike_ride/bundler/gems/forem-theme-twist-f08ab243ee69/app/assets/stylesheets/forem/twist/style.css.scss */
+#forum .description, #topic .description {
+    color: #888888;
+    font-style: oblique;
+}
+
+/* line 58, ../../../../../../../.rvm/gems/ruby-1.9.3-p194@bike_ride/bundler/gems/forem-theme-twist-f08ab243ee69/app/assets/stylesheets/forem/twist/style.css.scss */
+#forum menu, #topic menu {
+    padding-left: 0;
+}
+
+/* line 60, ../../../../../../../.rvm/gems/ruby-1.9.3-p194@bike_ride/bundler/gems/forem-theme-twist-f08ab243ee69/app/assets/stylesheets/forem/twist/style.css.scss */
+#forum menu a, #topic menu a {
+    border: 1px solid #ddd;
+    background: #eee;
+    padding: .35em;
+    display: inline-block;
+    -webkit-border-radius: 5px;
+    color: #0074FF;
+    font-weight: bold;
+    text-decoration: none;
+    margin: 0;
+}
+
+/* line 70, ../../../../../../../.rvm/gems/ruby-1.9.3-p194@bike_ride/bundler/gems/forem-theme-twist-f08ab243ee69/app/assets/stylesheets/forem/twist/style.css.scss */
+#forum menu a:hover, #topic menu a:hover {
+    background-color: #0074FF;
+    color: #eee;
+    border: 1px solid #0258BF;
+}
+
+/* line 80, ../../../../../../../.rvm/gems/ruby-1.9.3-p194@bike_ride/bundler/gems/forem-theme-twist-f08ab243ee69/app/assets/stylesheets/forem/twist/style.css.scss */
+#topic h2, #forum h2 {
+    padding: 0.5em 0;
+    position: relative;
+    color: #232323;
+    margin: 0;
+}
+
+/* line 85, ../../../../../../../.rvm/gems/ruby-1.9.3-p194@bike_ride/bundler/gems/forem-theme-twist-f08ab243ee69/app/assets/stylesheets/forem/twist/style.css.scss */
+#topic h2 a, #forum h2 a {
+    text-decoration: none;
+    color: #232323;
+}
+
+/* line 88, ../../../../../../../.rvm/gems/ruby-1.9.3-p194@bike_ride/bundler/gems/forem-theme-twist-f08ab243ee69/app/assets/stylesheets/forem/twist/style.css.scss */
+#topic h2 a:hover, #forum h2 a:hover {
+    text-decoration: underline;
+}
+
+/* line 92, ../../../../../../../.rvm/gems/ruby-1.9.3-p194@bike_ride/bundler/gems/forem-theme-twist-f08ab243ee69/app/assets/stylesheets/forem/twist/style.css.scss */
+#topic h2 a.reply, #forum h2 a.reply {
+    margin-right: 1em;
+    font-weight: normal;
+    position: absolute;
+    right: 0;
+    padding: .5em;
+    background-color: #fff;
+    font-size: .5em;
+    text-decoration: none;
+}
+
+/* line 109, ../../../../../../../.rvm/gems/ruby-1.9.3-p194@bike_ride/bundler/gems/forem-theme-twist-f08ab243ee69/app/assets/stylesheets/forem/twist/style.css.scss */
+form label {
+    font-size: 80%;
+}
+
+/* line 111, ../../../../../../../.rvm/gems/ruby-1.9.3-p194@bike_ride/bundler/gems/forem-theme-twist-f08ab243ee69/app/assets/stylesheets/forem/twist/style.css.scss */
+form label abbr {
+    display: none;
+}
+
+/* line 115, ../../../../../../../.rvm/gems/ruby-1.9.3-p194@bike_ride/bundler/gems/forem-theme-twist-f08ab243ee69/app/assets/stylesheets/forem/twist/style.css.scss */
+/*form input, form textarea {*/
+    /*padding: .5em;*/
+    /*font-size: 110%;*/
+/*}*/
+
+/* line 121, ../../../../../../../.rvm/gems/ruby-1.9.3-p194@bike_ride/bundler/gems/forem-theme-twist-f08ab243ee69/app/assets/stylesheets/forem/twist/style.css.scss */
+.moderation {
+    clear: both;
+    font-size: .8em;
+    background: #9C0000;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    color: white;
+    width: 90%;
+    font-weight: bold;
+    padding: 5px;
+}
+
+/* line 133, ../../../../../../../.rvm/gems/ruby-1.9.3-p194@bike_ride/bundler/gems/forem-theme-twist-f08ab243ee69/app/assets/stylesheets/forem/twist/style.css.scss */
+#posts {
+    overflow: hidden;
+    width: 100%;
+}
+
+/* line 138, ../../../../../../../.rvm/gems/ruby-1.9.3-p194@bike_ride/bundler/gems/forem-theme-twist-f08ab243ee69/app/assets/stylesheets/forem/twist/style.css.scss */
+#posts .odd .contents {
+    background-color: #ffffff;
+}
+
+/* line 141, ../../../../../../../.rvm/gems/ruby-1.9.3-p194@bike_ride/bundler/gems/forem-theme-twist-f08ab243ee69/app/assets/stylesheets/forem/twist/style.css.scss */
+#posts .even .contents {
+    background-color: #efefef;
+}
+
+/* line 144, ../../../../../../../.rvm/gems/ruby-1.9.3-p194@bike_ride/bundler/gems/forem-theme-twist-f08ab243ee69/app/assets/stylesheets/forem/twist/style.css.scss */
+#posts .post {
+    position: relative;
+    margin-top: .5em;
+    margin-bottom: .5em;
+    min-width: 35em;
+    min-height: 75px;
+    clear: both;
+}
+
+/* line 152, ../../../../../../../.rvm/gems/ruby-1.9.3-p194@bike_ride/bundler/gems/forem-theme-twist-f08ab243ee69/app/assets/stylesheets/forem/twist/style.css.scss */
+#posts .post .user {
+    float: left;
+    font-size: .8em;
+    min-width: 75px;
+    min-height: 100px;
+    padding: .5em 1em;
+}
+
+/* line 158, ../../../../../../../.rvm/gems/ruby-1.9.3-p194@bike_ride/bundler/gems/forem-theme-twist-f08ab243ee69/app/assets/stylesheets/forem/twist/style.css.scss */
+#posts .post .user .username {
+    padding-bottom: .7em;
+}
+
+/* line 161, ../../../../../../../.rvm/gems/ruby-1.9.3-p194@bike_ride/bundler/gems/forem-theme-twist-f08ab243ee69/app/assets/stylesheets/forem/twist/style.css.scss */
+#posts .post .user .icon {
+    background: transparent url(http://placekitten.com/50/50) no-repeat;
+    width: 50px;
+    height: 50px;
+    text-align: right;
+}
+
+/* line 169, ../../../../../../../.rvm/gems/ruby-1.9.3-p194@bike_ride/bundler/gems/forem-theme-twist-f08ab243ee69/app/assets/stylesheets/forem/twist/style.css.scss */
+#posts .post .contents {
+    min-height: 100px;
+    width: 80%;
+    border-left: 1px solid #ababab;
+    padding: 1em 1em;
+    float: right;
+}
+
+/* line 176, ../../../../../../../.rvm/gems/ruby-1.9.3-p194@bike_ride/bundler/gems/forem-theme-twist-f08ab243ee69/app/assets/stylesheets/forem/twist/style.css.scss */
+#posts .post .contents span.in_reply_to {
+    font-size: 80%;
+}
+
+/* line 180, ../../../../../../../.rvm/gems/ruby-1.9.3-p194@bike_ride/bundler/gems/forem-theme-twist-f08ab243ee69/app/assets/stylesheets/forem/twist/style.css.scss */
+#posts .post .contents p, #posts .post .contents ul, #posts .post .contents pre, #posts .post .contents blockquote, #posts .post .contents span.in_reply_to {
+    clear: both;
+    float: left;
+    padding: 5px;
+}
+
+/* line 186, ../../../../../../../.rvm/gems/ruby-1.9.3-p194@bike_ride/bundler/gems/forem-theme-twist-f08ab243ee69/app/assets/stylesheets/forem/twist/style.css.scss */
+#posts .post .contents p {
+    margin: .5em 0em 0em 0em;
+}
+
+/* line 190, ../../../../../../../.rvm/gems/ruby-1.9.3-p194@bike_ride/bundler/gems/forem-theme-twist-f08ab243ee69/app/assets/stylesheets/forem/twist/style.css.scss */
+#posts .post .contents blockquote {
+    -webkit-border-radius: 5px;
+    padding: 0;
+    width: 83%;
+}
+
+/* line 196, ../../../../../../../.rvm/gems/ruby-1.9.3-p194@bike_ride/bundler/gems/forem-theme-twist-f08ab243ee69/app/assets/stylesheets/forem/twist/style.css.scss */
+#posts .post .contents ul {
+    margin-left: 2em;
+}
+
+/* line 198, ../../../../../../../.rvm/gems/ruby-1.9.3-p194@bike_ride/bundler/gems/forem-theme-twist-f08ab243ee69/app/assets/stylesheets/forem/twist/style.css.scss */
+#posts .post .contents ul p {
+    padding: 0;
+    margin: 0;
+    float: none;
+}
+
+/* line 205, ../../../../../../../.rvm/gems/ruby-1.9.3-p194@bike_ride/bundler/gems/forem-theme-twist-f08ab243ee69/app/assets/stylesheets/forem/twist/style.css.scss */
+#posts .post .contents pre {
+    width: 90%;
+    background: #dfdfdf;
+}
+
+/* line 210, ../../../../../../../.rvm/gems/ruby-1.9.3-p194@bike_ride/bundler/gems/forem-theme-twist-f08ab243ee69/app/assets/stylesheets/forem/twist/style.css.scss */
+#posts .post .contents time {
+    float: left;
+    clear: both;
+    padding: 5px;
+    color: #888888;
+    font-size: .7em;
+    display: inline-block;
+}
+
+/* line 221, ../../../../../../../.rvm/gems/ruby-1.9.3-p194@bike_ride/bundler/gems/forem-theme-twist-f08ab243ee69/app/assets/stylesheets/forem/twist/style.css.scss */
+#posts .post .contents .actions {
+    position: absolute;
+    top: -10px;
+    right: 0px;
+    float: right;
+    -webkit-border-radius: 5px;
+    list-style-type: none;
+}
+
+/* line 229, ../../../../../../../.rvm/gems/ruby-1.9.3-p194@bike_ride/bundler/gems/forem-theme-twist-f08ab243ee69/app/assets/stylesheets/forem/twist/style.css.scss */
+#posts .post .contents .actions li a {
+    padding: .5em;
+    margin-bottom: .4em;
+    font-size: .7em;
+    text-align: center;
+    display: block;
+    border: 1px solid #ddd;
+    background: #eee;
+    -webkit-border-radius: 5px;
+    color: #0074FF;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* line 241, ../../../../../../../.rvm/gems/ruby-1.9.3-p194@bike_ride/bundler/gems/forem-theme-twist-f08ab243ee69/app/assets/stylesheets/forem/twist/style.css.scss */
+#posts .post .contents .actions li a:hover {
+    background-color: #0074FF;
+    color: #eee;
+    border: 1px solid #0258BF;
+}
+
+/* line 253, ../../../../../../../.rvm/gems/ruby-1.9.3-p194@bike_ride/bundler/gems/forem-theme-twist-f08ab243ee69/app/assets/stylesheets/forem/twist/style.css.scss */
+table.subdued {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+/* line 257, ../../../../../../../.rvm/gems/ruby-1.9.3-p194@bike_ride/bundler/gems/forem-theme-twist-f08ab243ee69/app/assets/stylesheets/forem/twist/style.css.scss */
+table.subdued a {
+    text-decoration: none;
+}
+
+/* line 259, ../../../../../../../.rvm/gems/ruby-1.9.3-p194@bike_ride/bundler/gems/forem-theme-twist-f08ab243ee69/app/assets/stylesheets/forem/twist/style.css.scss */
+table.subdued a:visited {
+    color: black;
+}
+
+/* line 262, ../../../../../../../.rvm/gems/ruby-1.9.3-p194@bike_ride/bundler/gems/forem-theme-twist-f08ab243ee69/app/assets/stylesheets/forem/twist/style.css.scss */
+table.subdued a:hover {
+    text-decoration: underline;
+}
+
+/* line 266, ../../../../../../../.rvm/gems/ruby-1.9.3-p194@bike_ride/bundler/gems/forem-theme-twist-f08ab243ee69/app/assets/stylesheets/forem/twist/style.css.scss */
+table.subdued td, table.subdued th {
+    padding: .5em;
+}
+
+/* line 270, ../../../../../../../.rvm/gems/ruby-1.9.3-p194@bike_ride/bundler/gems/forem-theme-twist-f08ab243ee69/app/assets/stylesheets/forem/twist/style.css.scss */
+table.subdued thead th {
+    background-color: #222222;
+    font-weight: normal;
+    text-align: left;
+}
+
+/* line 276, ../../../../../../../.rvm/gems/ruby-1.9.3-p194@bike_ride/bundler/gems/forem-theme-twist-f08ab243ee69/app/assets/stylesheets/forem/twist/style.css.scss */
+table.subdued tbody {
+    color: #888888;
+}
+
+/* line 280, ../../../../../../../.rvm/gems/ruby-1.9.3-p194@bike_ride/bundler/gems/forem-theme-twist-f08ab243ee69/app/assets/stylesheets/forem/twist/style.css.scss */
+table.subdued tbody .started-by {
+    font-size: .7em;
+    color: #888888;
+}
+
+/* line 284, ../../../../../../../.rvm/gems/ruby-1.9.3-p194@bike_ride/bundler/gems/forem-theme-twist-f08ab243ee69/app/assets/stylesheets/forem/twist/style.css.scss */
+table.subdued tbody .latest-post {
+    font-size: .7em;
+    width: 80px;
+}
+
+/* line 287, ../../../../../../../.rvm/gems/ruby-1.9.3-p194@bike_ride/bundler/gems/forem-theme-twist-f08ab243ee69/app/assets/stylesheets/forem/twist/style.css.scss */
+table.subdued tbody .latest-post a {
+    text-decoration: none;
+}
+
+/* line 289, ../../../../../../../.rvm/gems/ruby-1.9.3-p194@bike_ride/bundler/gems/forem-theme-twist-f08ab243ee69/app/assets/stylesheets/forem/twist/style.css.scss */
+table.subdued tbody .latest-post a:hover {
+    text-decoration: underline;
+}
+
+/* line 294, ../../../../../../../.rvm/gems/ruby-1.9.3-p194@bike_ride/bundler/gems/forem-theme-twist-f08ab243ee69/app/assets/stylesheets/forem/twist/style.css.scss */
+table.subdued tbody .posts-count, table.subdued tbody .views-count {
+    font-size: .8em;
+    width: 80px;
+}
+
+/* line 302, ../../../../../../../.rvm/gems/ruby-1.9.3-p194@bike_ride/bundler/gems/forem-theme-twist-f08ab243ee69/app/assets/stylesheets/forem/twist/style.css.scss */
+.pages .page {
+    display: inline-block;
+    padding: .25em;
+}
+
+/* line 305, ../../../../../../../.rvm/gems/ruby-1.9.3-p194@bike_ride/bundler/gems/forem-theme-twist-f08ab243ee69/app/assets/stylesheets/forem/twist/style.css.scss */
+.pages .page.current {
+    background-color: #111111;
+}
+
+/* line 309, ../../../../../../../.rvm/gems/ruby-1.9.3-p194@bike_ride/bundler/gems/forem-theme-twist-f08ab243ee69/app/assets/stylesheets/forem/twist/style.css.scss */
+.pages a {
+    text-decoration: none;
+}
+
+/* line 311, ../../../../../../../.rvm/gems/ruby-1.9.3-p194@bike_ride/bundler/gems/forem-theme-twist-f08ab243ee69/app/assets/stylesheets/forem/twist/style.css.scss */
+.pages a:hover {
+    text-decoration: underline;
+}
+
+/* line 317, ../../../../../../../.rvm/gems/ruby-1.9.3-p194@bike_ride/bundler/gems/forem-theme-twist-f08ab243ee69/app/assets/stylesheets/forem/twist/style.css.scss */
+.lock.icon {
+    width: 24px;
+    height: 24px;
+    background: transparent url(/assets/forem/lock_icon.png) 0 0;
+    display: inline-block;
+}
+
+/* line 324, ../../../../../../../.rvm/gems/ruby-1.9.3-p194@bike_ride/bundler/gems/forem-theme-twist-f08ab243ee69/app/assets/stylesheets/forem/twist/style.css.scss */
+.pin.icon {
+    width: 9px;
+    height: 15px;
+    background: transparent url(/assets/forem/pin_icon.png) 0 0;
+    display: inline-block;
+}
+
+/* line 331, ../../../../../../../.rvm/gems/ruby-1.9.3-p194@bike_ride/bundler/gems/forem-theme-twist-f08ab243ee69/app/assets/stylesheets/forem/twist/style.css.scss */
+#admin_link {
+    text-align: center;
+}

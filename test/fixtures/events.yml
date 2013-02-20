@@ -1,0 +1,31 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  type: 
+  date: 2012-11-05
+  start_at_time: 2012-11-05 12:18:46
+  end_at_time: 2012-11-05 12:18:46
+  start_at_place: MyString
+  end_at_place: MyString
+  distance: 1
+  coverage: MyString
+  rate: 1
+  stuff: MyString
+  contacts: MyString
+  description: MyText
+
+two:
+  name: MyString
+  type: 
+  date: 2012-11-05
+  start_at_time: 2012-11-05 12:18:46
+  end_at_time: 2012-11-05 12:18:46
+  start_at_place: MyString
+  end_at_place: MyString
+  distance: 1
+  coverage: MyString
+  rate: 1
+  stuff: MyString
+  contacts: MyString
+  description: MyText

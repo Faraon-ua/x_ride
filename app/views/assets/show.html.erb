@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Asset file name:</b>
+  <%= @asset.asset_file_name %>
+</p>
+
+<p>
+  <b>Asset content type:</b>
+  <%= @asset.asset_content_type %>
+</p>
+
+<p>
+  <b>Asset file size:</b>
+  <%= @asset.asset_file_size %>
+</p>
+
+<p>
+  <b>Asset updated at:</b>
+  <%= @asset.asset_updated_at %>
+</p>
+
+<p>
+  <b>Title:</b>
+  <%= @asset.title %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @asset.description %>
+</p>
+
+<p>
+  <b>Url:</b>
+  <%= @asset.url %>
+</p>
+
+<p>
+  <b>Part:</b>
+  <%= @asset.part_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_asset_path(@asset) %> |
+<%= link_to 'Back', assets_path %>

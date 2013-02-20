@@ -1,0 +1,18 @@
+<%= link_to 'New Part type', new_part_type_path %>
+<br/>
+<br/>
+
+<ul class="part_types_box">
+
+  <% @part_types.each_slice(4) do |slice| %>
+      <% slice.each do |part_type| %>
+          <%= render part_type %>
+      <% end %>
+      <li class="breaker">
+        <hr/>
+      </li>
+  <% end %>
+</ul>
+
+<br/>
+

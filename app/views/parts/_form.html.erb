@@ -1,0 +1,92 @@
+<hr/>
+
+<%= form_for @part, :html => {:multipart => true} do |f| %>
+    <% if @part.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@part.errors.count, "error") %> prohibited this part from being saved:</h2>
+
+          <ul>
+            <% @part.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+
+    <table>
+      <tr>
+        <td>
+          <h3><%= t(:part_pictures) %></h3>
+          <%= f.fields_for :assets do |asset_fields| %>
+
+          <% end %>
+          <%= f.fields_for :assets do |asset_fields| %>
+              <% if asset_fields.object.new_record? %>
+                  <br/>
+                  <%= asset_fields.file_field :asset, :accept => "image/*" %>
+              <% else %>
+                  <%= link_to image_tag(asset_fields.object.asset.url(:thumb)), asset_fields.object.asset.url(:original) %>
+                  <%= asset_fields.check_box :_destroy %> <%= t '.remove' %>
+              <% end %>
+          <% end %>
+        </td>
+        <td>
+          <div class="field">
+            <strong><%= t '.brand' %></strong>
+            <br/>
+            <%= f.text_field :brand_name %>
+          </div>
+          <div class="field">
+            <strong><%= t '.part_name' %>  </strong>
+            <br/>
+            <%= f.text_field :title %>
+          </div>
+          <div class="field">
+            <strong><%= t '.price' %></strong>
+            (0 uah to publish as gift)
+            <br/>
+            <%= f.number_field :price %> грн
+          </div>
+          <div class="field">
+            <strong><%= t '.region' %></strong>
+            <br/>
+            <%= f.select :region, t("regions").invert %>
+          </div>
+          <div class="field">
+            <strong><%= t '.availability' %></strong>
+            <br/>
+            <%= f.radio_button :available, "available", :checked => true %>
+            <%= t '.available' %>
+            <%= f.radio_button :available, "on_request" %>
+            <%= t '.on_request' %>
+            <%= f.radio_button :available, "sold_out" %>
+            <%= t '.sold_out' %>
+          </div>
+          <div class="field">
+            <strong><%= t '.condition' %></strong>
+            <br/>
+            <%= f.radio_button :condition, 'new', :checked => true %>
+            <%= t '.new' %>
+            <%= f.radio_button :condition, 'used' %>
+            <%= t '.used' %>
+          </div>
+          <div class="field">
+            <strong><%= t '.part_type' %></strong>
+            <br/>
+            <%= f.collection_select :part_type_id, PartType.all, :id, :title %>
+          </div>
+        </td>
+      </tr>
+    </table>
+
+    <div class="field">
+      <strong><%= t '.description' %></strong>
+      <br/>
+      <%= f.text_area :description, :class => "redactor" %>
+    </div>
+
+    <br/>
+    <div class="actions">
+      <%= f.submit "#{t '.submit'}" %>
+    </div>
+<% end %>

@@ -1,0 +1,35 @@
+<div class="pull-left" style="margin-right:10px;">
+  <%= image_tag @part.assets.first.asset.url(:medium) %>
+  <div id="gallery">
+    <% @part.assets.each do |asset| %>
+        <a rel="gallery" href="<%= asset.asset.url(:original) %>" title="<%= asset.title %>">
+          <%= image_tag asset.asset.url(:thumb) %>
+        </a>
+    <% end %>
+  </div>
+</div>
+
+<h1>
+  <%= @part.title %>
+</h1>
+<p>
+  <b>Brand name:</b>
+  <%= @part.brand_name %>
+</p>
+<p>
+  <b>Price:</b>
+  <%= @part.price %>
+</p>
+
+<p>
+  <b>Available:</b>
+  <%= @part.available %>
+</p>
+
+<h2>Description:</h2>
+<%= raw @part.description %>
+
+<% if is_owner_or_admin(@part.id) %>
+    <%= link_to 'Edit', edit_part_path(@part) %> |
+<% end %>
+<%= link_to 'Back', parts_path %>
